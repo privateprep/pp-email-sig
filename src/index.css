@@ -69,6 +69,10 @@ body {
   background-color: var(--accent);
 }
 
+.link-button:focus, button:focus {
+  outline: var(--dark) auto 1px;
+}
+
 @keyframes shimmer {
   0% {
     background-position: 0 0;
