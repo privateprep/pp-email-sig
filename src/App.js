@@ -223,31 +223,19 @@ const App = () => {
           <div style={{ backgroundColor: "var(--bg-alt)", padding: "1rem" }}>
             <SignaturePreview {...formValues} />
           </div>
-          <button
-            style={{ marginTop: "1rem", width: 166, textAlign: "center" }}
-            onClick={(event) => {
-              let previewEl = document.getElementById("SignaturePreview");
-              let copyText = previewEl.innerHTML
-
-              navigator.clipboard
-                .writeText(copyText)
-                .then(() => {
-                  // temp swap icon label!
-                  event.target.innerText = '✅ Copied!'
-                  setTimeout(() => {
-                    event.target.innerText = 'Copy to Clipboard'
-                  }, 2000);
-                })
-                .catch(err => {
-                  event.target.innerText = '😥 Error!'
-                  console.error(`Error copying text to clipboard: ${err}`);
-                });
-
-                document.execCommand("copy", false, copyText);
-            }}
-          >
-            Copy to Clipboard
-          </button>
+          <h2>Add to Gmail</h2>
+          <ol>
+            <li>Open Gmail in another tab</li>
+            <li>In the nav menu, Click the settings gear (⚙︎) then 'See all settings'</li>
+            <li>Under 'General' scroll down to 'Signature' (most of way down)</li>
+            <li>Click 'Create New' name it 'PP Signature'</li>
+            <li>Copy the above Preview</li>
+            <li>Paste into the Signature Editor</li>
+            <li>Ensure new Signature set for 'New Emails Use' and 'On Reply/Forward Use'</li>
+            <li>Click 'Save Changes' at bottom of form!</li>
+            <li>Send an email to yourself to double check the phone links</li>
+            <li>Celebrate! 🎉</li>
+          </ol>
         </div>
       </main>
     </div>
