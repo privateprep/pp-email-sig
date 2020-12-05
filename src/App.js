@@ -211,6 +211,7 @@ const App = () => {
                   }, 2000);
                 })
                 .catch(err => {
+                  event.target.innerText = '😥 Error!'
                   console.error(`Error copying text to clipboard: ${err}`);
                 });
 
