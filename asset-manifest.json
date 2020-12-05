@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pp-email-sig/static/css/main.af5efb0e.chunk.css",
+    "main.css": "/pp-email-sig/static/css/main.d227d9a1.chunk.css",
     "main.js": "/pp-email-sig/static/js/main.1d9e086d.chunk.js",
     "main.js.map": "/pp-email-sig/static/js/main.1d9e086d.chunk.js.map",
     "runtime-main.js": "/pp-email-sig/static/js/runtime-main.1f0638ef.js",
@@ -10,14 +10,14 @@
     "static/js/3.b90a9c3a.chunk.js": "/pp-email-sig/static/js/3.b90a9c3a.chunk.js",
     "static/js/3.b90a9c3a.chunk.js.map": "/pp-email-sig/static/js/3.b90a9c3a.chunk.js.map",
     "index.html": "/pp-email-sig/index.html",
-    "static/css/main.af5efb0e.chunk.css.map": "/pp-email-sig/static/css/main.af5efb0e.chunk.css.map",
+    "static/css/main.d227d9a1.chunk.css.map": "/pp-email-sig/static/css/main.d227d9a1.chunk.css.map",
     "static/js/2.88f85da1.chunk.js.LICENSE.txt": "/pp-email-sig/static/js/2.88f85da1.chunk.js.LICENSE.txt",
     "static/media/logo.8e954ab4.svg": "/pp-email-sig/static/media/logo.8e954ab4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1f0638ef.js",
     "static/js/2.88f85da1.chunk.js",
-    "static/css/main.af5efb0e.chunk.css",
+    "static/css/main.d227d9a1.chunk.css",
     "static/js/main.1d9e086d.chunk.js"
   ]
 }
