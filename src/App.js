@@ -196,8 +196,26 @@ const App = () => {
             <SignaturePreview {...formValues} />
           </div>
           <button
-            style={{ marginTop: "1rem" }}
-            onClick={() => alert("Make me work!")}
+            style={{ marginTop: "1rem", width: 166, textAlign: "center" }}
+            onClick={(event) => {
+              let previewEl = document.getElementById("SignaturePreview");
+              let copyText = previewEl.innerHTML
+
+              navigator.clipboard
+                .writeText(copyText)
+                .then(() => {
+                  // temp swap icon label!
+                  event.target.innerText = '✅ Copied!'
+                  setTimeout(() => {
+                    event.target.innerText = 'Copy to Clipboard'
+                  }, 2000);
+                })
+                .catch(err => {
+                  console.error(`Error copying text to clipboard: ${err}`);
+                });
+
+                document.execCommand("copy", false, copyText);
+            }}
           >
             Copy to Clipboard
           </button>
