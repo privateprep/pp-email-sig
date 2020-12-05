@@ -6,7 +6,7 @@ import "./App.css";
 const App = () => {
   let [formValues, setFormValues] = useState({
   name: "Carol Johnson | she/her/hers",
-  title: "Account Manager",
+  titles: [{ body: "All Star Tutor" }],
   phones: [{ type: "m.", number: "212.867.5309", note: "" }],
   extraContacts: [],
 });
@@ -37,20 +37,54 @@ const App = () => {
                 </span>
               )}
             </div>
-            <div className="field-wrap">
-              <label htmlFor="name">Title</label>
-              <input
-                name="title"
-                value={formValues.title}
-                onChange={(e) =>
-                  setFormValues({ ...formValues, title: e.target.value })
-                }
-              />
-              {!formValues.title && (
-                <span role="alert" style={{ color: "var(--danger)" }}>
-                  Required
-                </span>
-              )}
+            <div className="field-wrap field-wrap--list">
+              <label htmlFor="title">{formValues.titles.length > 1 ? 'Titles' : 'Title'}</label>
+              <ul>
+                {formValues.titles.map((title, titleIndex) => (
+                  <li key={titleIndex}>
+                    <div className="list-form-fields">
+                      <input
+                        name={`title[${titleIndex}].body`}
+                        onChange={(e) =>
+                          setFormValues({
+                            ...formValues,
+                            titles: formValues.titles.map((t, i) =>
+                              i === titleIndex
+                                ? { ...title, body: e.target.value }
+                                : t
+                            ),
+                          })
+                        }
+                        placeholder="Title..."
+                        value={title.body}
+                      />
+                    </div>
+                    <button
+                      className="button button--danger"
+                      type="button"
+                      onClick={() =>
+                        setFormValues({
+                          ...formValues,
+                          titles: formValues.titles.filter((_t, i) => i !== titleIndex)
+                        })
+                      }
+                    >
+                      <span role="img" aria-label="Remove">X</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              {!!formValues.titles.length && <small style={{ fontStyle: 'italic', marginBottom: "0.5rem" }}>Don't know what to write? Ask or be creative!</small>}
+              <button
+                type="button"
+                onClick={() =>
+                  setFormValues({
+                    ...formValues,
+                    titles: [...formValues.titles, { body: '' }],
+                  })}
+              >
+                Add Title
+              </button>
             </div>
             <div className="field-wrap field-wrap--list">
               <div style={{ display: 'flex', alignItems: 'baseline' }}>
