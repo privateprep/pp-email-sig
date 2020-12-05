@@ -6,7 +6,6 @@ Main motivation is having the telephone numbers be links!
 
 ## TODO:
 
-- [ ] get copy working
 - [ ] allow for multiple titles
 - [ ] add page about how to add to gmail?
 - [ ] talk to ops/marketing/resources for rollout
