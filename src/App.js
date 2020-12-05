@@ -54,7 +54,7 @@ const App = () => {
             </div>
             <div className="field-wrap field-wrap--list">
               <div style={{ display: 'flex', alignItems: 'baseline' }}>
-                <label style={{ marginRight: "0.5rem" }}htmlFor="name">Phone Numbers</label>
+                <label style={{ marginRight: "0.5rem" }} htmlFor="phones">Phone Numbers</label>
                 <small style={{ fontStyle: 'italic' }}>Check links to call work!</small>
               </div>
               <ul>
@@ -134,13 +134,7 @@ const App = () => {
               </button>
             </div>
             <div className="field-wrap field-wrap--list">
-              <div style={{ display: 'flex', alignItems: 'baseline' }}>
-                <label style={{ marginRight: "0.5rem" }} htmlFor="phone_numbers">Additional Contact Methods</label>
-              </div>
-              <label htmlFor="name">
-
-
-              </label>
+              <label htmlFor="extraContacts">Additional Contact Methods</label>
               <ul>
                 {formValues.extraContacts.map((extraContact, extraIndex) => (
                   <li key={extraIndex}>
