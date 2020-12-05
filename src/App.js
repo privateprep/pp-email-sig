@@ -7,7 +7,7 @@ const App = () => {
   let [formValues, setFormValues] = useState({
   name: "Carol Johnson | she/her/hers",
   title: "Account Manager",
-  phones: [{ type: "m.", number: "212.123.4567", note: "" }],
+  phones: [{ type: "m.", number: "212.867.5309", note: "" }],
   extraContacts: [],
 });
 
@@ -127,7 +127,7 @@ const App = () => {
                 onClick={() =>
                   setFormValues({
                     ...formValues,
-                    phones: [...formValues.phones, { type: "m.", number: "212.123.4567", note: "" }],
+                    phones: [...formValues.phones, { type: "m.", number: "212.867.5309", note: "" }],
                   })}
               >
                 Add Phone Number
