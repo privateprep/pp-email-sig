@@ -32,7 +32,7 @@ body {
 }
 
 
-.btn, .button, .link-button, button {
+.button, .link-button, button {
   background-color: var(--accent);
   color: var(--dark);
   border-radius: 4px;
@@ -55,18 +55,19 @@ body {
   text-shadow: none;
 }
 
-.btn.btn--isSubmitting,
-.btn:hover,
+.button--danger, .link-button--danger {
+  background-color: var(--danger);
+  border-color: var(--danger);
+}
+
 .button.button--isSubmitting,
 .button:hover,
 .link-button.link-button--isSubmitting,
 .link-button:hover, button:hover {
   background-image: linear-gradient(135deg,rgba(0,0,0,.1) 25%,transparent 0,transparent 50%,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) 75%,transparent 0,transparent);
   animation: shimmer 2.8s linear infinite;
-  border-color: var(--accent);
   outline: none;
   box-shadow: none;
-  background-color: var(--accent);
 }
 
 .link-button:focus, button:focus {

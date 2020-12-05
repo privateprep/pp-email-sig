@@ -36,6 +36,28 @@
   margin-top: 1rem;
 }
 
+.field-wrap.field-wrap--list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.field-wrap.field-wrap--list ul li {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  grid-gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.list-form-fields {
+  display: grid;
+}
+
+.list-form-fields.list-form-fields--number {
+  grid-template-columns: 2rem 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
 label {
   font-weight: bold;
   margin-bottom: .5rem;
