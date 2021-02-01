@@ -6,13 +6,15 @@ import React from "react";
 // original HTML from agency in ./pp-email-sig.html
 // see below for more readable format!
 
+// color: "#3F4F53" == "rgb(63,79,83)"
+
 const VERSION = "version-2020-12-04"
-const agencyHTML = `<table id="${VERSION}" cellpadding=0 cellspacing=0 style="mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0;padding:0;margin:0;width:270px;background-repeat:repeat;background-position:center top"width=270 class=es-wrapper><tr style=border-collapse:collapse><td style=padding:0;margin:0 valign=top><table cellpadding=0 cellspacing=0 style="mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0;table-layout:fixed!important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top"class=es-header align=center><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left><table cellpadding=0 cellspacing=0 style=mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0;background-color:#FFF width=270 class=es-header-body align=left bgcolor=#ffffff><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left><table cellpadding=0 cellspacing=0 style=mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0 width=100%><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=center valign=top width=270 class=es-m-p0r><table cellpadding=0 cellspacing=0 style=mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0 width=100%><tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-bottom:10px align=left class=es-m-txt-l><img alt=""src=$CDN_LOGO_PATH$ style=display:block;border:0;outline:0;text-decoration:none;-ms-interpolation-mode:bicubic width=22><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left><p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:27px;color:#3F4F53"><strong>$NAME$</strong><tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-top:5px;padding-bottom:5px align=left><table cellpadding=0 cellspacing=0 style=width:100%!important width=100% border=0><tr><td style=background-color:#B0DFDE;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;mso-line-height-rule:exactly;line-height:1px align=left valign=top width=270px height=1></table><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left><p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:24px;color:#3F4F53">Private Prep<tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left>$TITLES$<tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-bottom:10px align=left>$PHONES$$EXTRA_CONTACTS$<tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-bottom:5px align=left><table cellpadding=0 cellspacing=0 style=width:100%!important width=100% border=0><tr><td style=background-color:#B0DFDE;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;mso-line-height-rule:exactly;line-height:1px align=left valign=top width=270px height=1></table><tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-top:5px;padding-bottom:10px align=left class=es-m-txt-l><p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:8px!important;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:8px;color:#3F4F53;letter-spacing:1px;white-space:nowrap">TEST PREP | SUBJECT TUTORING | COLLEGE ADMISSIONS<tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left></table></table></table></table></table>`
+const agencyHTML = `<table id="${VERSION}" cellpadding=0 cellspacing=0 style="mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0;padding:0;margin:0;width:270px;background-repeat:repeat;background-position:center top"width=270 class=es-wrapper><tr style=border-collapse:collapse><td style=padding:0;margin:0 valign=top><table cellpadding=0 cellspacing=0 style="mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0;table-layout:fixed!important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top"class=es-header align=center><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left><table cellpadding=0 cellspacing=0 style=mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0;background-color:#FFF width=270 class=es-header-body align=left bgcolor=#ffffff><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left><table cellpadding=0 cellspacing=0 style=mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0 width=100%><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=center valign=top width=270 class=es-m-p0r><table cellpadding=0 cellspacing=0 style=mso-table-lspace:0;mso-table-rspace:0;border-collapse:collapse;border-spacing:0 width=100%><tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-bottom:10px align=left class=es-m-txt-l><img alt=""src=$CDN_LOGO_PATH$ style=display:block;border:0;outline:0;text-decoration:none;-ms-interpolation-mode:bicubic width=22><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left><p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:27px;color:rgb(63,79,83)"><strong>$NAME$</strong><tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-top:5px;padding-bottom:5px align=left><table cellpadding=0 cellspacing=0 style=width:100%!important width=100% border=0><tr><td style=background-color:#B0DFDE;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;mso-line-height-rule:exactly;line-height:1px align=left valign=top width=270px height=1></table><tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left><p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:24px;color:rgb(63,79,83)">Private Prep<tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left>$TITLES$<tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-bottom:10px align=left>$PHONES$$EXTRA_CONTACTS$<tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-bottom:5px align=left><table cellpadding=0 cellspacing=0 style=width:100%!important width=100% border=0><tr><td style=background-color:#B0DFDE;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;mso-line-height-rule:exactly;line-height:1px align=left valign=top width=270px height=1></table><tr style=border-collapse:collapse><td style=padding:0;margin:0;padding-top:5px;padding-bottom:10px align=left class=es-m-txt-l><p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:8px!important;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:8px;color:rgb(63,79,83);letter-spacing:1px;white-space:nowrap">TEST PREP | SUBJECT TUTORING | COLLEGE ADMISSIONS<tr style=border-collapse:collapse><td style=padding:0;margin:0 align=left></table></table></table></table></table>`
 const CDN_LOGO_PATH =
   "https://isrxo.stripocdn.email/content/guids/CABINET_dfa2ad0d24e819202a7df94b6dc8a4e7/images/78731552557056196.gif";
 
 const buildTitleMarkup = ({ body }) => {
-  return `<p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:24px;color:#3F4F53;">${body}</p>`
+  return `<p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:24px;color:rgb(63,79,83);">${body}</p>`
 }
 
 const buildPhoneMarkup = ({ number, type, note }, index) => {
@@ -22,11 +24,11 @@ const buildPhoneMarkup = ({ number, type, note }, index) => {
     body = `<strong>${body}</strong>`
   }
 
-  return `<a href="${href}" rel="nofollow" style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:24px;color:#3F4F53;display:block;text-decoration:none">${body}</a>`
+  return `<a href="${href}" rel="nofollow" style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:24px;display:block;text-decoration:none;color:rgb(63,79,83);">${body}</a>`
 }
 
 const buildExtraContact = ({body}) => {
-  return `<p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:24px;color:#3F4F53;">${body}</p>`
+  return `<p style="margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'Century Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:24px;color:rgb(63,79,83);">${body}</p>`
 }
 
 const SignaturePreview = ({ name, titles, phones, extraContacts = [] }) => {
@@ -174,7 +176,7 @@ const SignaturePreview = ({ name, titles, phones, extraContacts = [] }) => {
 //                                               fontFamily:
 //                                                 '"Century Gothic","Helvetica Neue",Helvetica,Arial,sans-serif',
 //                                               lineHeight: "27px",
-//                                               color: "#3F4F53",
+//                                               color: "rgb(63,79,83)",
 //                                             }}
 //                                           >
 //                                             <strong>{name}</strong>
@@ -239,7 +241,7 @@ const SignaturePreview = ({ name, titles, phones, extraContacts = [] }) => {
 //                                               fontFamily:
 //                                                 '"Century Gothic","Helvetica Neue",Helvetica,Arial,sans-serif',
 //                                               lineHeight: "24px",
-//                                               color: "#3F4F53",
+//                                               color: "rgb(63,79,83)",
 //                                             }}
 //                                           >
 //                                             Private Prep
@@ -263,7 +265,7 @@ const SignaturePreview = ({ name, titles, phones, extraContacts = [] }) => {
 //                                               fontFamily:
 //                                                 '"Century Gothic","Helvetica Neue",Helvetica,Arial,sans-serif',
 //                                               lineHeight: "26px",
-//                                               color: "#3F4F53",
+//                                               color: "rgb(63,79,83)",
 //                                             }}
 //                                           >
 //                                             {title}
@@ -299,7 +301,7 @@ const SignaturePreview = ({ name, titles, phones, extraContacts = [] }) => {
 //                                                     fontFamily:
 //                                                       '"Century Gothic","Helvetica Neue",Helvetica,Arial,sans-serif',
 //                                                     lineHeight: "24px",
-//                                                     color: "#3F4F53",
+//                                                     color: "rgb(63,79,83)",
 //                                                     display: "block",
 //                                                     textDecoration: "none"
 //                                                   }}
@@ -374,7 +376,7 @@ const SignaturePreview = ({ name, titles, phones, extraContacts = [] }) => {
 //                                               fontFamily:
 //                                                 '"Century Gothic","Helvetica Neue",Helvetica,Arial,sans-serif',
 //                                               lineHeight: "8px",
-//                                               color: "#3F4F53",
+//                                               color: "rgb(63,79,83)",
 //                                               letterSpacing: "1px",
 //                                               whiteSpace: "nowrap",
 //                                             }}
